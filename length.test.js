@@ -1,4 +1,4 @@
-const characterCount = require('./StringCount');
+const characterCount = require('./length.js');
 
 //Arrange
 const message = {

@@ -1,7 +1,24 @@
-const calculator = {
-    add: (num1, num2) => num1 + num2,
-    subtract: (num1, num2) => num1 - num2,
-    divide: (num1, num2) => num1 / num2,
-    multiply: (num1, num2) => num1 * num2
+class Calculator {
+  constructor(num1, num2) {
+    this.n1 = num1;
+    this.n2 = num2;
   }
-  module.exports = calculator;
+
+  addition() {
+    return (this.n1 + this.n2);
+  }
+
+  subtraction() {
+    return (this.n1 - this.n2);
+  }
+
+  division() {
+    return (this.n1 / this.n2);
+  }
+
+  multiplication() {
+    return (this.n1 * this.n2);
+  }
+}
+
+module.exports = Calculator;

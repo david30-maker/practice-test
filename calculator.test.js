@@ -1,18 +1,22 @@
-//Arrange
-const message = {
-    add: 'sum of 2 numbers are:',
-    divide: 'division of 2 numbers are:',
-    multiply: 'multiplication of 2 numbers are:'
-  }
-  
-  //Act
-  const sumOfNumbers = calculator.add(10, 5);
-  const divideOfNumbers = calculator.divide(10, 5);
-  const multiplyOfNumbers = calculator.multiply(10, 5);
-  
-  //Assert
-  describe('calculate', () => {
-    test(message.add, () => { expect(sumOfNumbers).toBe(15) })
-    test(message.divide, () => { expect(divideOfNumbers).toBe(2); })
-    test(message.multiply, () => { expect(multiplyOfNumbers).toBe(50); })
-  })
+const Calculator = require('./calculator.js');
+
+const calculation = new Calculator(9, 3);
+
+describe('Different Calculation, given two numbers', () => {
+  test('Addition of two numbers', () => {
+    expect(calculation.addition()).toBe(12);
+  });
+
+  test('Subtraction of two numbers', () => {
+    expect(calculation.subtraction()).toBe(6);
+  });
+
+  test('Division of first number by second number', () => {
+    expect(calculation.division()).toBe(3);
+  });
+
+  test('Multiplication of two numbers', () => {
+    expect(calculation.multiplication()).toBe(27);
+  });
+
+});
